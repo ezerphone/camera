@@ -40,6 +40,13 @@
             app:key="nr" app:title="הפחתת רעש (איכות גבוהה)" app:defaultValue="false" />
     </PreferenceCategory>
 
+    <PreferenceCategory app:title="תצוגה">
+        <SwitchPreferenceCompat
+            app:key="auto_rotate" app:title="סיבוב אוטומטי"
+            app:summary="מסובב את האייקונים ואת התמונות/סרטונים לפי כיוון המכשיר. כבוי = הכול נשאר בפורטרט."
+            app:defaultValue="true" />
+    </PreferenceCategory>
+
     <PreferenceCategory app:title="וידאו">
         <ListPreference
             app:key="video_quality" app:title="איכות וידאו" app:defaultValue="FHD"

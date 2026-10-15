@@ -215,6 +215,7 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         if (orientationListener.canDetectOrientation()) orientationListener.enable()
+        applyRotationPref()
         if (needRebind && provider != null) { needRebind = false; bindUseCases() }
     }
 
@@ -277,7 +278,19 @@ class MainActivity : AppCompatActivity() {
         b.thumbnail, b.btnShutter, b.recTimer, b.countdown, b.zoomLabel
     )
 
+    /** כשסיבוב אוטומטי כבוי: הכול נשאר בפורטרט (תמונות, סרטונים ואייקונים). */
+    private fun autoRotateOn() = sp.getBoolean("auto_rotate", true)
+
+    private fun applyRotationPref() {
+        if (autoRotateOn()) return
+        surfaceRotation = Surface.ROTATION_0
+        imageCapture?.targetRotation = Surface.ROTATION_0
+        videoCapture?.targetRotation = Surface.ROTATION_0
+        rotateUi(0f)
+    }
+
     private fun onDeviceOrientation(o: Int) {
+        if (!autoRotateOn()) return
         val snapped = ((o + 45) / 90 * 90) % 360          // 0 / 90 / 180 / 270
         val rot = when (snapped) {
             90 -> Surface.ROTATION_270
@@ -696,7 +709,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onImageSaved(r: ImageCapture.OutputFileResults) {
                     done()
                     if (extAction == "image") { finishImageCapture(uri); return }
-                    updateThumb(uri, false); showReview(uri)
+                    updateThumb(uri, false)
                     if (sp.getBoolean("enhance", false)) enhanceAsync(uri)
                 }
                 override fun onError(e: ImageCaptureException) {
