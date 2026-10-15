@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">מצלמה</string>
+    <string name="mode_normal">אוטומטי</string>
+    <string name="mode_video">וידאו</string>
+    <string name="mode_pro">מקצועי</string>
+    <string name="mode_qr">QR</string>
+    <string name="modes_title">מצבים</string>
+    <string name="settings_title">הגדרות</string>
+</resources>

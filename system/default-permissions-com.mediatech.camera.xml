@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- הרשאות שניתנות מראש (בלי חלון בקשה) כשהאפליקציה בתמונת המערכת.
+     מותקן ב: /system/etc/default-permissions/ -->
+<exceptions>
+    <exception package="com.mediatech.camera">
+        <permission name="android.permission.CAMERA" fixed="false" />
+        <permission name="android.permission.RECORD_AUDIO" fixed="false" />
+    </exception>
+</exceptions>

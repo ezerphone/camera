@@ -1,0 +1,16 @@
+<resources>
+    <string-array name="timer_entries"><item>כבוי</item><item>2 שניות</item><item>10 שניות</item></string-array>
+    <string-array name="timer_values"><item>0</item><item>2</item><item>10</item></string-array>
+    <string-array name="aspect_entries"><item>מסך מלא</item><item>4:3</item><item>16:9</item></string-array>
+    <string-array name="aspect_values"><item>full</item><item>4_3</item><item>16_9</item></string-array>
+    <string-array name="pq_entries"><item>מקסימלית</item><item>גבוהה</item><item>בינונית</item><item>נמוכה</item></string-array>
+    <string-array name="pq_values"><item>max</item><item>high</item><item>medium</item><item>low</item></string-array>
+    <string-array name="vq_entries"><item>4K</item><item>FHD</item><item>HD</item><item>SD</item></string-array>
+    <string-array name="vq_values"><item>UHD</item><item>FHD</item><item>HD</item><item>SD</item></string-array>
+    <string-array name="wb_entries"><item>אוטומטי</item><item>להט</item><item>פלורסנט</item><item>אור יום</item><item>מעונן</item><item>דמדומים</item><item>צל</item><item>חם</item></string-array>
+    <string-array name="wb_values"><item>auto</item><item>incandescent</item><item>fluorescent</item><item>daylight</item><item>cloudy</item><item>twilight</item><item>shade</item><item>warm</item></string-array>
+    <string-array name="scene_entries"><item>כבוי</item><item>פעולה</item><item>חוף</item><item>אור נרות</item><item>זיקוקים</item><item>נוף</item><item>לילה</item><item>דיוקן לילה</item><item>מסיבה</item><item>דיוקן</item><item>שלג</item><item>ספורט</item><item>צילום יציב</item><item>שקיעה</item><item>תיאטרון</item></string-array>
+    <string-array name="scene_values"><item>off</item><item>action</item><item>beach</item><item>candlelight</item><item>fireworks</item><item>landscape</item><item>night</item><item>night_portrait</item><item>party</item><item>portrait</item><item>snow</item><item>sports</item><item>steadyphoto</item><item>sunset</item><item>theatre</item></string-array>
+    <string-array name="ab_entries"><item>אוטומטי</item><item>כבוי</item><item>50Hz</item><item>60Hz</item></string-array>
+    <string-array name="ab_values"><item>auto</item><item>off</item><item>50</item><item>60</item></string-array>
+</resources>

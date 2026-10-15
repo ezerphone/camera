@@ -1,0 +1,22 @@
+// שילוב כאפליקציית מערכת ב-AOSP / ROM מותאם.
+// 1. בנה את ה-APK (gradle assembleRelease), חתום, ושמור כאן בשם MediatechCamera.apk
+// 2. הוסף את התיקייה הזו ל-vendor/ או packages/apps/ והוסף ל-PRODUCT_PACKAGES: MediatechCamera
+android_app_import {
+    name: "MediatechCamera",
+    apk: "MediatechCamera.apk",
+    privileged: true,          // מותקן ב-priv-app
+    presigned: true,           // או: certificate: "platform" אם רוצים לחתום עם מפתח הפלטפורמה
+    dex_preopt: {
+        enabled: false,
+    },
+    // מחליף את אפליקציות המצלמה שבתמונת המערכת
+    overrides: ["Camera2", "Snap", "Aperture"],
+    required: ["default_permissions_com.mediatech.camera"],
+}
+
+prebuilt_etc {
+    name: "default_permissions_com.mediatech.camera",
+    src: "default-permissions-com.mediatech.camera.xml",
+    sub_dir: "default-permissions",
+    filename_from_src: true,
+}
