@@ -11,12 +11,12 @@ android_app_import {
     },
     // מחליף את אפליקציות המצלמה שבתמונת המערכת
     overrides: ["Camera2", "Snap", "Aperture"],
-    required: ["default_permissions_com.mediatech.camera"],
+    required: ["default_permissions_com.mediatek.camera"],
 }
 
 prebuilt_etc {
-    name: "default_permissions_com.mediatech.camera",
-    src: "default-permissions-com.mediatech.camera.xml",
+    name: "default_permissions_com.mediatek.camera",
+    src: "default-permissions-com.mediatek.camera.xml",
     sub_dir: "default-permissions",
     filename_from_src: true,
 }

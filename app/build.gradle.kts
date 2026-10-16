@@ -7,11 +7,11 @@ android {
     namespace = "com.mediatech.camera"
     compileSdk = 34
     defaultConfig {
-        applicationId = "com.mediatech.camera"
+        applicationId = "com.mediatek.camera"
         minSdk = 26
         targetSdk = 34
-        versionCode = 5
-        versionName = "2.3"
+        versionCode = 6
+        versionName = "2.4"
     }
     buildFeatures { viewBinding = true }
     compileOptions {

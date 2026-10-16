@@ -26,11 +26,6 @@
             android:exported="true"
             android:showWhenLocked="true"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
             <!-- כך האפליקציה מופיעה כבחירה כשאפליקציה אחרת (וואטסאפ וכו') מבקשת מצלמה -->
             <intent-filter>
                 <action android:name="android.media.action.IMAGE_CAPTURE" />
@@ -54,6 +49,21 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+
+        <!-- כניסה בשם הרכיב של המצלמה המקורית של המכשיר (MediaTek): כפתור המצלמה הפיזי והלאנצ'ר
+             פותחים במפורש com.mediatek.camera/.CameraLauncher, ולכן חייב להיות רכיב בשם הזה -->
+        <activity-alias
+            android:name="com.mediatek.camera.CameraLauncher"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_camera1"
+            android:label="@string/app_name"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
 
         <activity
             android:name=".SettingsActivity"
