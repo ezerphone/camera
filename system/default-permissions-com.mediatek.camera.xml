@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- הרשאות שניתנות מראש (בלי חלון בקשה) כשהאפליקציה בתמונת המערכת.
+     מותקן ב: /system/etc/default-permissions/ -->
+<exceptions>
+    <exception package="com.mediatek.camera">
+        <permission name="android.permission.CAMERA" fixed="false" />
+        <permission name="android.permission.RECORD_AUDIO" fixed="false" />
+        <permission name="android.permission.READ_MEDIA_IMAGES" fixed="false" />
+        <permission name="android.permission.READ_MEDIA_VIDEO" fixed="false" />
+        <permission name="android.permission.READ_EXTERNAL_STORAGE" fixed="false" />
+    </exception>
+</exceptions>
