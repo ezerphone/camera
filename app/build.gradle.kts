@@ -12,6 +12,18 @@ android {
         targetSdk = 34
         versionCode = 18
         versionName = "3.6"
+        // הנגן משתמש רק בספריות 64 ביט
+        ndk { abiFilters += "arm64-v8a" }
+    }
+    buildTypes {
+        release {
+            // כיווץ: מוחק קוד ומשאבים שלא בשימוש (מקטין מאוד את הקובץ)
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            // חתימה זמנית — חתימת המערכת מושתלת אחר כך בעזרים
+            signingConfig = signingConfigs.getByName("debug")
+        }
     }
     buildFeatures { viewBinding = true }
     compileOptions {
